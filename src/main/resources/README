@@ -1,0 +1,13 @@
+
+# Copy Java cacerts
+$ cp $JAVA_HOME/jre/lib/security/cacerts .
+
+# Download 'Symantec Class 3 ECC 256 bit SSL CA - G2' intermediate cert from https://knowledge.verisign.com/support/ssl-certificates-support/index?page=content&actp=CROSSLINK&id=INFO2673
+# Save as verisignclass3eccg2ca.pem
+
+# Load intermediate cert into cacerts
+keytool -importcert -alias "verisignclass3eccg2ca" -file verisignclass3eccg2ca.pem -keystore cacerts -storepass changeit -trustcacerts
+
+# Create generic client keystore
+echo | keytool -genkeypair -alias client -keyalg EC -keystore clientKeyStore.jks -storepass clientPass -sigalg SHA256withECDSA -validity 365 -dname "CN=CoAP Client, O=CoAPs Example, L=SF, S=CA, C=US"
+
