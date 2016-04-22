@@ -18,15 +18,15 @@ Usage
 java -jar target/dtlsclient-1.0.jar
 
 Usage: SecureClient [-v] -X POST -d 'JSON-Payload' URI
+
 Usage: SecureClient [-v] -X GET URI
 
-URI can be an absolute secure coap URI
- -v          verbose logging
- -X GET      perform an Observe GET request
- -X POST     perform an POST request with data
- -d <data>   JSON data for POST request
- -t <sec>    Seconds to wait for Observe GET request (def: 10)
-
+ - URI can be an absolute secure coap URI
+ - -v          verbose logging
+ - -X GET      perform an Observe GET request
+ - -X POST     perform an POST request with data
+ - -d <data>   JSON data for POST request
+ - -t <sec>    Seconds to wait for Observe GET request (def: 10)
 
 More about ARTIK Cloud
 ----------------------
