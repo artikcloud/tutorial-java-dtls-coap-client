@@ -1,4 +1,6 @@
-# DTLS CoAP client that communicates with ARTIK Cloud CoAP server
+# DTLS CoAP client 
+
+A tuorial DTLS CoAP client communicates with ARTIK Cloud CoAP server.
 
 Prerequisites
 -------------
