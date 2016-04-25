@@ -2,7 +2,7 @@
 
 A tuorial DTLS CoAP client communicates with the ARTIK Cloud CoAP server.
 
-Consult [ARTIK Cloud CoAP](https://developer.artik.cloud/documentation/connect-the-data/coap.html) for the explanation of the app usage and the implementation.
+Consult [ARTIK Cloud CoAP](https://developer.artik.cloud/documentation/connect-the-data/coap.html) for the explanation of the app usage and implementation.
 
 Prerequisites
 -------------
