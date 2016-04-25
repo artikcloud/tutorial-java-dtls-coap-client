@@ -1,6 +1,8 @@
-# DTLS CoAP client 
+# DTLS CoAP client app
 
-A tuorial DTLS CoAP client communicates with ARTIK Cloud CoAP server.
+A tuorial DTLS CoAP client communicates with the ARTIK Cloud CoAP server.
+
+Consult [ARTIK Cloud COAP](https://developer.artik.cloud/documentation/connect-the-data/coap.html) for the explanation of the app usage and the implementation.
 
 Prerequisites
 -------------
@@ -17,17 +19,25 @@ The executable jar `dtlsclient` is created in the target directory.
 Usage
 ------
 
-java -jar target/dtlsclient-1.0.jar
+ - Post a data-only message
 
-Usage: SecureClient [-v] -X POST -d 'JSON-Payload' URI
+~~~shell 
+java -jar target/dtlsclient-x.x.jar [-v] -X POST -d 'Message-JSON-Payload' URI
+~~~
 
-Usage: SecureClient [-v] -X GET URI
+ - Get (Observe) actions
 
- - URI can be an absolute secure coap URI
+~~~shell 
+java -jar target/dtlsclient-x.x.jar [-v] -X GET URI
+~~~
+
+The input arguments are explained below:
+
+ - URI         an absolute secure coap URI (consult [Artik Cloud CoAP example](https://developer.artik.cloud/documentation/connect-the-data/coap.html) for URI examples)
  - -v          verbose logging
  - -X GET      perform an Observe GET request
- - -X POST     perform an POST request with data
- - -d <data>   JSON data for POST request
+ - -X POST     perform an POST request
+ - -d <data>   POST request JSON data, which is a Artik Cloud message.
  - -t <sec>    Seconds to wait for Observe GET request (def: 10)
 
 More about ARTIK Cloud
